@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NexShop Clothing — Denim jackets, running sneakers, and graphic tees.">
+    <title>NexShop — Clothing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="main-header">
+        <div class="header-inner">
+            <div class="header-brand">
+                <img src="images/logo.png" alt="NexShop Logo" class="header-logo">
+                <span class="header-title">NexShop</span>
+            </div>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="main.html" class="nav-link" id="nav-home"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="electronics.html" class="nav-link" id="nav-electronics"><i class="fa-solid fa-microchip"></i>
+                    Electronics</a>
+                <a href="clothing.html" class="nav-link active" id="nav-clothing"><i class="fa-solid fa-shirt"></i>
+                    Clothing</a>
+                <a href="books.html" class="nav-link" id="nav-books"><i class="fa-solid fa-book"></i> Books</a>
+                <a href="main.html" class="nav-link nav-cart" id="nav-cart">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                    <span id="cart-badge" style="display:none;">0</span>
+                </a>
+                <a href="logout.php" class="nav-link" id="nav-logout"><i class="fa-solid fa-right-from-bracket"></i>
+                    Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE TITLE BANNER ===== -->
+    <div class="category-page-header" id="page-header">
+        <h1 class="page-title">Clothing</h1>
+        <p class="page-subtitle">Stylish fashion for every occasion</p>
+    </div>
+
+    <!-- ===== QUICK NAVIGATION ===== -->
+    <nav class="quick-nav" aria-label="Quick navigation">
+        <span class="quick-nav-label"><i class="fa-solid fa-bolt"></i> Jump to:</span>
+        <div class="quick-nav-links">
+            <a href="#jacket" class="quick-nav-link">Denim Jacket</a>
+            <a href="#sneakers" class="quick-nav-link">Running Sneakers</a>
+            <a href="#tee" class="quick-nav-link">Graphic Tee</a>
+        </div>
+    </nav>
+
+    <!-- ===== THREE-COLUMN LAYOUT ===== -->
+    <div class="page-layout">
+
+        <!-- LEFT ASIDE: Shopping guidelines (persistent) -->
+        <aside class="aside-promo" id="aside-guidelines">
+            <h2 class="aside-title"><i class="fa-solid fa-tags"></i> Deals &amp; Tips</h2>
+
+            <div class="promo-item">
+                <span class="promo-badge">Hot Deal</span>
+                <p class="promo-text">Free returns within 30 days</p>
+                <p class="promo-discount">No cost to you</p>
+            </div>
+            <div class="promo-item">
+                <span class="promo-badge">Tip</span>
+                <p class="promo-text">Check the size chart before ordering</p>
+            </div>
+            <div class="promo-item">
+                <span class="promo-badge">Offer</span>
+                <p class="promo-text">Buy 3 items, get 15% off total</p>
+                <p class="promo-discount">−15%</p>
+            </div>
+            <div class="promo-item">
+                <span class="promo-badge">Tip</span>
+                <p class="promo-text">Hand wash recommended for best quality</p>
+            </div>
+        </aside>
+
+        <!-- MAIN: Product listings -->
+        <main class="products-main" id="products-main">
+
+            <p class="products-section-title">
+                <i class="fa-solid fa-shirt"></i> All Clothing Products
+            </p>
+
+            <div class="products-grid" id="clothing-grid">
+
+                <!-- ==================== Product 4: Classic Denim Jacket ==================== -->
+                <div class="product-card" id="jacket" data-product-id="4" data-product-name="Classic Denim Jacket"
+                    data-product-price="5700" data-product-category="Clothing" data-product-image="">
+
+                    <span class="product-card-badge">Clothing</span>
+
+                    <div class="product-img-wrapper">
+                        <div class="prod-icon prod-icon--jacket">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                    </div>
+
+                    <div class="product-card-body">
+                        <h3 class="product-name">Classic Denim Jacket</h3>
+                        <p class="product-desc">
+                            Timeless blue denim jacket with button-up front, chest pockets,
+                            and relaxed fit. Available in S, M, L, XL. Machine washable.
+                        </p>
+                        <p class="product-price">DA5700 <span>per item</span></p>
+
+                        <div class="product-actions">
+                            <div class="quantity-wrapper">
+                                <button class="qty-btn" onclick="decrementQty('4')"
+                                    aria-label="Decrease quantity">−</button>
+                                <input type="number" id="qty-4" class="qty-input" value="1" min="1" max="99"
+                                    aria-label="Quantity">
+                                <button class="qty-btn" onclick="incrementQty('4')"
+                                    aria-label="Increase quantity">+</button>
+                            </div>
+                            <button class="btn-add-cart" id="add-jacket" onclick="handleAddToCart(this)">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div><!-- /jacket -->
+
+                <!-- ==================== Product 5: Running Sneakers ==================== -->
+                <div class="product-card" id="sneakers" data-product-id="5" data-product-name="Running Sneakers"
+                    data-product-price="12000" data-product-category="Clothing" data-product-image="">
+
+                    <span class="product-card-badge">Clothing</span>
+
+                    <div class="product-img-wrapper">
+                        <div class="prod-icon prod-icon--sneakers">
+                            <i class="fa-solid fa-person-running"></i>
+                        </div>
+                    </div>
+
+                    <div class="product-card-body">
+                        <h3 class="product-name">Running Sneakers</h3>
+                        <p class="product-desc">
+                            Lightweight mesh-upper running shoes with responsive foam cushioning.
+                            Breathable design for daily training and gym workouts.
+                        </p>
+                        <p class="product-price">DA12000 <span>per item</span></p>
+
+                        <div class="product-actions">
+                            <div class="quantity-wrapper">
+                                <button class="qty-btn" onclick="decrementQty('5')"
+                                    aria-label="Decrease quantity">−</button>
+                                <input type="number" id="qty-5" class="qty-input" value="1" min="1" max="99"
+                                    aria-label="Quantity">
+                                <button class="qty-btn" onclick="incrementQty('5')"
+                                    aria-label="Increase quantity">+</button>
+                            </div>
+                            <button class="btn-add-cart" id="add-sneakers" onclick="handleAddToCart(this)">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div><!-- /sneakers -->
+
+                <!-- ==================== Product 6: Graphic Tee ==================== -->
+                <div class="product-card" id="tee" data-product-id="6" data-product-name="Graphic Tee"
+                    data-product-price="3000" data-product-category="Clothing" data-product-image="">
+
+                    <span class="product-card-badge">Clothing</span>
+
+                    <div class="product-img-wrapper">
+                        <div class="prod-icon prod-icon--tee">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                    </div>
+
+                    <div class="product-card-body">
+                        <h3 class="product-name">Graphic Tee</h3>
+                        <p class="product-desc">
+                            100% organic cotton crew-neck t-shirt with bold front print.
+                            Pre-shrunk, soft-touch fabric. Unisex fit. Sizes XS–XXL.
+                        </p>
+                        <p class="product-price">DA3000 <span>per item</span></p>
+
+                        <div class="product-actions">
+                            <div class="quantity-wrapper">
+                                <button class="qty-btn" onclick="decrementQty('6')"
+                                    aria-label="Decrease quantity">−</button>
+                                <input type="number" id="qty-6" class="qty-input" value="1" min="1" max="99"
+                                    aria-label="Quantity">
+                                <button class="qty-btn" onclick="incrementQty('6')"
+                                    aria-label="Increase quantity">+</button>
+                            </div>
+                            <button class="btn-add-cart" id="add-tee" onclick="handleAddToCart(this)">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div><!-- /tee -->
+
+            </div><!-- /.products-grid -->
+        </main>
+
+        <!-- RIGHT ASIDE: Cart summary (persistent) -->
+        <aside class="aside-cart" id="aside-cart">
+            <h2 class="aside-title"><i class="fa-solid fa-cart-shopping"></i> My Cart</h2>
+            <div id="cart-aside-content"></div>
+        </aside>
+
+    </div><!-- /.page-layout -->
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" id="page-footer">
+
+        <!-- Sticky checkout bar -->
+        <div class="footer-checkout" id="footer-checkout">
+            <div class="checkout-inner">
+                <div class="cart-summary-text">
+                    <p class="items-count" id="footer-item-count">0 items in cart</p>
+                    <p class="total-display">Total: <strong id="footer-total">DA 0</strong></p>
+                </div>
+                <button class="btn-checkout" id="btn-checkout" onclick="checkout()">
+                    <i class="fa-solid fa-check"></i> Checkout
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-brand-name">NexShop</span>
+                <p>Your one-stop digital marketplace.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Navigate</p>
+                <ul class="student-list">
+                    <li class="student-item"><i class="fa-solid fa-microchip"></i><a
+                            href="electronics.html">Electronics</a></li>
+                    <li class="student-item"><i class="fa-solid fa-shirt"></i><a href="clothing.html">Clothing</a></li>
+                    <li class="student-item"><i class="fa-solid fa-book"></i><a href="books.html">Books</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="footer-student-col">
+                <p class="footer-col-title">Student Info</p>
+                <ul class="student-list" id="student-info-list">
+                    <li class="student-item" id="student-name">
+                        <i class="fa-solid fa-user"></i><span>Your Full Name</span>
+                    </li>
+                    <li class="student-item" id="student-email">
+                        <i class="fa-solid fa-envelope"></i><span>yourname@email.com</span>
+                    </li>
+                    <li class="student-item" id="student-group">
+                        <i class="fa-solid fa-id-badge"></i><span>L2 — Group X</span>
+                    </li>
+                    <li class="student-item" id="student-section">
+                        <i class="fa-solid fa-graduation-cap"></i><span>Section: CS2</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom" id="footer-bottom">
+            <p>&copy; 2026 NexShop. All rights reserved.</p>
+            <p>WAD Homework — Faculty of Science</p>
+        </div>
+
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NexShop — Browse Electronics, Clothing, and Books. Your digital marketplace.">
+    <title>NexShop — Product Catalog</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ===================================================
+         HEADER — logo (left) + centered title + nav
+         =================================================== -->
+    <header class="site-header" id="main-header">
+        <div class="header-inner">
+
+            <!-- Brand: logo on the left, title centered -->
+            <div class="header-brand">
+                <img src="images/logo.png" alt="NexShop Logo" class="header-logo" id="header-logo">
+                <span class="header-title">NexShop</span>
+            </div>
+
+            <!-- Navigation links: categories + cart -->
+            <nav class="site-nav" id="main-nav" aria-label="Main navigation">
+                <a href="electronics.html" class="nav-link" id="nav-electronics">
+                    <i class="fa-solid fa-microchip"></i> Electronics
+                </a>
+                <a href="clothing.html" class="nav-link" id="nav-clothing">
+                    <i class="fa-solid fa-shirt"></i> Clothing
+                </a>
+                <a href="books.html" class="nav-link" id="nav-books">
+                    <i class="fa-solid fa-book"></i> Books
+                </a>
+                <a href="cart.html" class="nav-link nav-cart" id="nav-cart">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                    <!-- Live badge count updated by script.js -->
+                    <span id="cart-badge" style="display:none;">0</span>
+                </a>
+                <a href="logout.php" class="nav-link" id="nav-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- ===================================================
+         HERO — background shopping image + store title
+         =================================================== -->
+    <section class="hero" id="hero-section" aria-label="Store banner">
+        <!-- Background image (shopping related) -->
+        <img src="images/hero-bg.jpg" alt="Online shopping" class="hero-bg" id="hero-bg-img">
+        <!-- Colour overlay -->
+        <div class="hero-overlay"></div>
+        <!-- Text content -->
+        <div class="hero-content">
+            <h1>Welcome to NexShop</h1>
+            <p>Discover Electronics, Clothing &amp; Books at unbeatable prices</p>
+            <a href="#categories" class="hero-cta" id="hero-cta-btn">
+                <i class="fa-solid fa-bags-shopping"></i> Shop Now
+            </a>
+        </div>
+    </section>
+
+    <!-- ===================================================
+         MAIN — 3 <article> category blocks
+         =================================================== -->
+    <main id="categories">
+
+        <section class="categories-section" aria-label="Product categories">
+
+            <div class="section-heading">
+                <h2>Our Categories</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Grid of three category articles -->
+            <div class="categories-grid" id="categories-grid">
+
+                <!-- ---- Article 1: Electronics ---- -->
+                <article class="category-card" id="article-electronics">
+                    <div class="cat-img-wrap">
+                        <img src="images/electronics-banner.jpg" alt="Electronics category">
+                    </div>
+                    <div class="cat-body">
+                        <p class="cat-label">
+                            <i class="fa-solid fa-microchip"></i> Category
+                        </p>
+                        <h3 class="cat-name">Electronics</h3>
+                        <p class="cat-desc">
+                            The latest headphones, smartwatches and Bluetooth speakers.
+                            Premium gear for your digital lifestyle.
+                        </p>
+                        <a href="electronics.html" class="cat-link" id="link-electronics">
+                            Shop Electronics <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ---- Article 2: Clothing ---- -->
+                <article class="category-card" id="article-clothing">
+                    <div class="cat-img-wrap">
+                        <img src="images/clothing-banner.jpg" alt="Clothing category">
+                    </div>
+                    <div class="cat-body">
+                        <p class="cat-label">
+                            <i class="fa-solid fa-shirt"></i> Category
+                        </p>
+                        <h3 class="cat-name">Clothing</h3>
+                        <p class="cat-desc">
+                            Stylish denim jackets, comfy sneakers and graphic tees.
+                            Fashion that fits every occasion.
+                        </p>
+                        <a href="clothing.html" class="cat-link" id="link-clothing">
+                            Shop Clothing <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ---- Article 3: Books ---- -->
+                <article class="category-card" id="article-books">
+                    <div class="cat-img-wrap">
+                        <img src="images/books-banner.jpg" alt="Books category">
+                    </div>
+                    <div class="cat-body">
+                        <p class="cat-label">
+                            <i class="fa-solid fa-book"></i> Category
+                        </p>
+                        <h3 class="cat-name">Books</h3>
+                        <p class="cat-desc">
+                            Top programming titles, design patterns and tech classics.
+                            Knowledge that powers your career.
+                        </p>
+                        <a href="books.html" class="cat-link" id="link-books">
+                            Shop Books <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div><!-- /.categories-grid -->
+
+        </section>
+
+    </main>
+
+    <!-- ===================================================
+         FOOTER — student information with icons
+         =================================================== -->
+    <footer class="site-footer" id="main-footer">
+        <div class="footer-inner">
+
+            <!-- Brand blurb -->
+            <div class="footer-brand">
+                <span class="footer-brand-name">NexShop</span>
+                <p>Your one-stop digital marketplace for premium Electronics, Clothing, and Books.</p>
+            </div>
+
+            <!-- Quick links column -->
+            <div class="footer-col" id="footer-links-col">
+                <p class="footer-col-title">Quick Links</p>
+                <ul class="student-list">
+                    <li class="student-item">
+                        <i class="fa-solid fa-house"></i>
+                        <a href="main.html">Home</a>
+                    </li>
+                    <li class="student-item">
+                        <i class="fa-solid fa-microchip"></i>
+                        <a href="electronics.html">Electronics</a>
+                    </li>
+                    <li class="student-item">
+                        <i class="fa-solid fa-shirt"></i>
+                        <a href="clothing.html">Clothing</a>
+                    </li>
+                    <li class="student-item">
+                        <i class="fa-solid fa-book"></i>
+                        <a href="books.html">Books</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Student information column (required by assignment) -->
+            <div class="footer-col" id="footer-student-col">
+                <p class="footer-col-title">Student Info</p>
+                <ul class="student-list" id="student-info-list">
+                    <!-- Person icon for name -->
+                    <li class="student-item" id="student-name">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Your Full Name</span>
+                    </li>
+                    <!-- Envelope icon for email -->
+                    <li class="student-item" id="student-email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>yourname@email.com</span>
+                    </li>
+                    <!-- Badge icon for group / section -->
+                    <li class="student-item" id="student-group">
+                        <i class="fa-solid fa-id-badge"></i>
+                        <span>L2 — Group X</span>
+                    </li>
+                    <!-- Section info -->
+                    <li class="student-item" id="student-section">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Section: CS2</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div><!-- /.footer-inner -->
+
+        <!-- Bottom bar: copyright -->
+        <div class="footer-bottom" id="footer-bottom">
+            <p>&copy; 2026 NexShop. All rights reserved.</p>
+            <p>WAD Homework — Faculty of Science, Dept. of Computer Science</p>
+        </div>
+
+    </footer>
+
+    <!-- Toast container (dynamically populated by script.js) -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
